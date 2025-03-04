@@ -1,7 +1,7 @@
 const XLSX = require('xlsx');
 
 // 文件路径定义
-const tagFilePath = 'tag.xlsx'; 
+const tagFilePath = '20250228.xlsx'; 
 const MSTagFilePath = '02_MSTag.xlsx';
 
 // 读取 Excel 文件函数
@@ -59,7 +59,7 @@ const worksheet = XLSX.utils.json_to_sheet(updatedTagData);
 
 // 在B列后插入新的列（tagNewTranslate）
 const headers = ['tagNewTranslate'];
-headers.reverse().forEach(header => XLSX.utils.sheet_add_aoa(worksheet, [[header]], { origin: 'C1' }));
+headers.reverse().forEach(header => XLSX.utils.sheet_add_aoa(worksheet, [[header]], { origin: 'D1' }));
 
 // 创建一个新的工作簿并添加工作表
 const workbook = XLSX.utils.book_new();
